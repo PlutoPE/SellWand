@@ -97,13 +97,13 @@ class Main extends PluginBase implements Listener {
                             return true;
                         }
                         EconomyAPI::getInstance()->addMoney($player->getName(), (int)$revenue);
-                        $player->sendMessage(TextFormat::colorize($this->replaceVars("&a&lSuccess! &r&7sold the contents of the Chest for §8\${MONEY}", array(
+                        $player->sendMessage(TextFormat::colorize($this->replaceVars("&a&lSuccess! &r&7sold the contents of the Chest for ยง8\${MONEY}", array(
                             "MONEY" => (string)$revenue))));
                         $event->setCancelled(true);
                     }
-                } return 
+                } return; 
             }
             }
         }
-    ;
+    }
 }
